@@ -3,230 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Elasam Labs - Privacy-first apps and AI-powered tools for everyday users">
-    <meta name="keywords" content="privacy, apps, AI tools, offline software">
+    
+    <!-- SEO & Meta Tags -->
+    <meta name="description" content="Elasam Labs - Privacy-first apps, offline-first tools, and AI-powered solutions for developers, students, professionals, and families.">
+    <meta name="keywords" content="privacy apps, offline software, AI tools, secure applications, privacy-first, open source">
     <meta name="author" content="Elasam Labs">
     <meta name="theme-color" content="#0f172a">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
     
-    <title>Elasam Labs - Privacy-First Apps & AI Tools</title>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elasamlabs.com/">
+    <meta property="og:title" content="Elasam Labs - Privacy-First Apps & AI Tools">
+    <meta property="og:description" content="Build with privacy. Create with purpose. Modern apps for everyday users.">
+    <meta property="og:image" content="https://elasamlabs.com/assets/og-image.png">
+    <meta property="og:site_name" content="Elasam Labs">
     
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://elasamlabs.com/">
+    <meta name="twitter:title" content="Elasam Labs - Privacy-First Apps & AI Tools">
+    <meta name="twitter:description" content="Build with privacy. Create with purpose. Modern apps for everyday users.">
+    <meta name="twitter:image" content="https://elasamlabs.com/assets/og-image.png">
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230f172a' width='100' height='100'/><circle cx='50' cy='50' r='35' fill='%2306b6d4'/></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%230f172a' width='180' height='180'/><circle cx='90' cy='90' r='60' fill='%2306b6d4'/></svg>">
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <title>Elasam Labs - Privacy-First Apps & AI-Powered Tools</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Elasam Labs",
+      "url": "https://elasamlabs.com",
+      "logo": "https://elasamlabs.com/assets/logo.svg",
+      "description": "Privacy-first apps, offline-first tools, and AI-powered solutions",
+      "sameAs": [
+        "https://github.com/EhabElasam",
+        "https://linkedin.com"
+      ],
+      "contact": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "support@elasamlabs.com"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container">
-            <div class="nav-content">
-                <div class="logo">
+            <div class="nav-wrapper">
+                <a href="/" class="logo" aria-label="Elasam Labs Home">
                     <span class="logo-icon">⚡</span>
                     <span class="logo-text">Elasam Labs</span>
-                </div>
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                </a>
+                
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#apps">Apps</a></li>
-                    <li><a href="#principles">Principles</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">🌙</button></li>
+                
+                <ul class="nav-menu" id="navMenu" role="menubar">
+                    <li role="none"><a href="#apps" role="menuitem">Apps</a></li>
+                    <li role="none"><a href="#why" role="menuitem">Why Elasam</a></li>
+                    <li role="none"><a href="#about" role="menuitem">About</a></li>
+                    <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+                    <li role="none"><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" role="menuitem">🌙</button></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" role="region" aria-label="Hero section">
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">Elasam Labs</h1>
-                <p class="hero-subtitle">Privacy-first apps and AI-powered tools.</p>
-                <div class="hero-buttons">
+                <p class="hero-subtitle">Privacy-first Apps. Offline-first Tools. AI-powered Solutions.</p>
+                <p class="hero-description">Modern digital products built for developers, students, professionals, families, and privacy-conscious users.</p>
+                
+                <div class="hero-cta">
                     <a href="#apps" class="btn btn-primary">Explore Apps</a>
-                    <a href="https://github.com/EhabElasam" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View GitHub</a>
+                    <a href="https://github.com/EhabElasam" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
                 </div>
             </div>
+            
             <div class="hero-visual">
-                <div class="hero-shape"></div>
+                <div class="gradient-orb"></div>
             </div>
         </div>
     </section>
 
     <!-- Apps Section -->
-    <section class="apps" id="apps">
+    <section class="apps" id="apps" role="region" aria-label="Our applications">
         <div class="container">
-            <h2 class="section-title">Our Apps</h2>
-            <p class="section-subtitle">Practical tools built with care for real people</p>
+            <div class="section-header">
+                <h2>Our Applications</h2>
+                <p>Carefully crafted tools designed with privacy and simplicity in mind.</p>
+            </div>
             
             <div class="apps-grid">
                 <!-- PDF Offline -->
-                <div class="app-card published">
-                    <div class="app-icon">📄</div>
-                    <h3 class="app-name">PDF Offline</h3>
-                    <p class="app-description">Offline PDF tools for merging, signing, splitting, redacting and converting files.</p>
-                    <div class="app-status">
-                        <span class="badge badge-published">Published</span>
-                        <span class="badge-text">Google Play</span>
+                <article class="app-card published">
+                    <div class="app-header">
+                        <span class="app-icon" aria-hidden="true">📄</span>
+                        <span class="app-badge badge-published">Published</span>
                     </div>
-                </div>
+                    <h3 class="app-title">PDF Offline</h3>
+                    <p class="app-description">Offline PDF tools for merging, signing, splitting, redacting and converting files. No internet required.</p>
+                    <div class="app-meta">
+                        <span class="platform">Google Play</span>
+                    </div>
+                </article>
 
                 <!-- Sudoku Flow -->
-                <div class="app-card developing">
-                    <div class="app-icon">🎮</div>
-                    <h3 class="app-name">Sudoku Flow</h3>
-                    <p class="app-description">A clean offline Sudoku game focused on focus, progress and smooth play.</p>
-                    <div class="app-status">
-                        <span class="badge badge-developing">In Development</span>
+                <article class="app-card developing">
+                    <div class="app-header">
+                        <span class="app-icon" aria-hidden="true">🎮</span>
+                        <span class="app-badge badge-developing">In Development</span>
                     </div>
-                </div>
+                    <h3 class="app-title">Sudoku Flow</h3>
+                    <p class="app-description">A clean, minimalist Sudoku game focused on focus, progress tracking, and smooth gameplay. Completely offline.</p>
+                    <div class="app-meta">
+                        <span class="status">Coming Soon</span>
+                    </div>
+                </article>
 
                 <!-- English Vocab Kids -->
-                <div class="app-card developing">
-                    <div class="app-icon">📚</div>
-                    <h3 class="app-name">English Vocab Kids</h3>
-                    <p class="app-description">A playful vocabulary learning app for children and school practice.</p>
-                    <div class="app-status">
-                        <span class="badge badge-developing">In Development</span>
+                <article class="app-card developing">
+                    <div class="app-header">
+                        <span class="app-icon" aria-hidden="true">📚</span>
+                        <span class="app-badge badge-developing">In Development</span>
                     </div>
-                </div>
+                    <h3 class="app-title">English Vocab Kids</h3>
+                    <p class="app-description">Playful vocabulary learning app for children and school practice. Engaging, educational, and offline-capable.</p>
+                    <div class="app-meta">
+                        <span class="status">Coming Soon</span>
+                    </div>
+                </article>
 
                 <!-- Travel Pack -->
-                <div class="app-card concept">
-                    <div class="app-icon">✈️</div>
-                    <h3 class="app-name">Travel Pack</h3>
-                    <p class="app-description">Smart packing lists and travel organization for frequent travelers.</p>
-                    <div class="app-status">
-                        <span class="badge badge-concept">Concept</span>
+                <article class="app-card concept">
+                    <div class="app-header">
+                        <span class="app-icon" aria-hidden="true">✈️</span>
+                        <span class="app-badge badge-concept">Concept</span>
                     </div>
-                </div>
+                    <h3 class="app-title">Travel Pack</h3>
+                    <p class="app-description">Smart packing lists and travel organization tools for frequent travelers. Plan, organize, and never forget anything.</p>
+                    <div class="app-meta">
+                        <span class="status">Concept Phase</span>
+                    </div>
+                </article>
 
                 <!-- VPN App -->
-                <div class="app-card prototype">
-                    <div class="app-icon">🔒</div>
-                    <h3 class="app-name">VPN App</h3>
-                    <p class="app-description">Secure VPN concept with WireGuard-based architecture.</p>
-                    <div class="app-status">
-                        <span class="badge badge-prototype">Prototype</span>
+                <article class="app-card prototype">
+                    <div class="app-header">
+                        <span class="app-icon" aria-hidden="true">🔒</span>
+                        <span class="app-badge badge-prototype">Prototype</span>
                     </div>
-                </div>
+                    <h3 class="app-title">VPN App</h3>
+                    <p class="app-description">Secure VPN with WireGuard-based architecture. Fast, reliable, and privacy-focused network protection.</p>
+                    <div class="app-meta">
+                        <span class="status">Prototype</span>
+                    </div>
+                </article>
 
                 <!-- AI Tools -->
-                <div class="app-card coming-soon">
-                    <div class="app-icon">🤖</div>
-                    <h3 class="app-name">AI Tools</h3>
-                    <p class="app-description">Small AI-powered utilities and developer tools.</p>
-                    <div class="app-status">
-                        <span class="badge badge-coming">Coming Soon</span>
+                <article class="app-card coming">
+                    <div class="app-header">
+                        <span class="app-icon" aria-hidden="true">🤖</span>
+                        <span class="app-badge badge-coming">Coming Soon</span>
                     </div>
-                </div>
+                    <h3 class="app-title">AI Tools</h3>
+                    <p class="app-description">Collection of small AI-powered utilities and developer tools. Intelligent solutions for everyday tasks.</p>
+                    <div class="app-meta">
+                        <span class="status">In Planning</span>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Principles Section -->
-    <section class="principles" id="principles">
+    <!-- Why Elasam Section -->
+    <section class="why-section" id="why" role="region" aria-label="Why choose Elasam Labs">
         <div class="container">
-            <h2 class="section-title">Our Principles</h2>
-            <p class="section-subtitle">What drives everything we build</p>
+            <div class="section-header">
+                <h2>Why Elasam Labs</h2>
+                <p>Built on principles that matter</p>
+            </div>
             
             <div class="principles-grid">
                 <div class="principle-card">
-                    <div class="principle-icon">🔐</div>
-                    <h3>Privacy-First</h3>
-                    <p>Your data is yours. We build tools that respect your privacy and never compromise on security.</p>
+                    <span class="principle-icon" aria-hidden="true">🔐</span>
+                    <h3>Privacy First</h3>
+                    <p>Your data is yours. We never compromise on privacy and security. No tracking, no analytics, no surveillance.</p>
                 </div>
+                
                 <div class="principle-card">
-                    <div class="principle-icon">📱</div>
-                    <h3>Offline When Possible</h3>
-                    <p>Most features work without internet. Fast, reliable, and independent from cloud services.</p>
+                    <span class="principle-icon" aria-hidden="true">📱</span>
+                    <h3>Offline Whenever Possible</h3>
+                    <p>Most features work without internet. Fast, reliable, and independent from cloud services and connectivity.</p>
                 </div>
+                
                 <div class="principle-card">
-                    <div class="principle-icon">✨</div>
-                    <h3>Simple UX</h3>
-                    <p>Beautiful interfaces that are intuitive and easy to use. No unnecessary complexity.</p>
+                    <span class="principle-icon" aria-hidden="true">✨</span>
+                    <h3>Simple & Elegant</h3>
+                    <p>Beautiful interfaces that are intuitive and easy to use. No unnecessary complexity or bloat.</p>
                 </div>
+                
                 <div class="principle-card">
-                    <div class="principle-icon">🎯</div>
-                    <h3>Useful Tools</h3>
-                    <p>We build solutions for real problems that real people face every day.</p>
+                    <span class="principle-icon" aria-hidden="true">⚡</span>
+                    <h3>Fast & Efficient</h3>
+                    <p>Optimized for performance. Quick load times, smooth interactions, and responsive design on all devices.</p>
                 </div>
+                
                 <div class="principle-card">
-                    <div class="principle-icon">❤️</div>
+                    <span class="principle-icon" aria-hidden="true">🔒</span>
+                    <h3>Secure by Design</h3>
+                    <p>Security built into every layer. Encryption, secure protocols, and best practices throughout.</p>
+                </div>
+                
+                <div class="principle-card">
+                    <span class="principle-icon" aria-hidden="true">❤️</span>
                     <h3>Built with Care</h3>
-                    <p>Every detail matters. We invest time and attention into creating quality software.</p>
+                    <p>Every detail matters. We invest time and attention into creating quality software that people love.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
+    <section class="about" id="about" role="region" aria-label="About Elasam Labs">
         <div class="container">
-            <h2 class="section-title">About Elasam Labs</h2>
             <div class="about-content">
-                <p>Elasam Labs is an independent software brand focused on building practical apps, privacy-friendly tools, and AI-powered solutions for everyday users, students, families, and small businesses.</p>
-                <p>We believe that technology should be simple, secure, and respectful. Our mission is to create tools that solve real problems while protecting user privacy and maintaining the highest standards of quality.</p>
+                <h2>About Elasam Labs</h2>
+                <p>Elasam Labs is an independent software brand focused on building practical applications, privacy-friendly tools, and AI-powered solutions for everyday users, students, families, and small businesses.</p>
+                <p>We believe that technology should be simple, secure, and respectful of user privacy. Our mission is to create digital products that solve real problems while maintaining the highest standards of quality, security, and ethical practices.</p>
+                <p>Every application we build is designed with purpose. We prioritize user experience, performance, and privacy above all else. We're committed to building software that people can trust.</p>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" role="region" aria-label="Contact information">
         <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <p class="section-subtitle">We'd love to hear from you</p>
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>We'd love to hear from you</p>
+            </div>
             
             <div class="contact-grid">
                 <div class="contact-card">
                     <h3>General Inquiries</h3>
-                    <a href="mailto:hello@elasamlabs.com">hello@elasamlabs.com</a>
+                    <a href="mailto:hello@elasamlabs.com" class="contact-link">hello@elasamlabs.com</a>
                 </div>
+                
                 <div class="contact-card">
                     <h3>Support</h3>
-                    <a href="mailto:support@elasamlabs.com">support@elasamlabs.com</a>
+                    <a href="mailto:support@elasamlabs.com" class="contact-link">support@elasamlabs.com</a>
                 </div>
+                
                 <div class="contact-card">
-                    <h3>Privacy</h3>
-                    <a href="mailto:privacy@elasamlabs.com">privacy@elasamlabs.com</a>
+                    <h3>Privacy & Security</h3>
+                    <a href="mailto:privacy@elasamlabs.com" class="contact-link">privacy@elasamlabs.com</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-section">
                     <h4>Elasam Labs</h4>
-                    <p>Privacy-first apps and AI-powered tools</p>
+                    <p>Privacy-first apps and AI-powered tools for a better digital world.</p>
                 </div>
+                
                 <div class="footer-section">
-                    <h4>Links</h4>
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#apps">Apps</a></li>
+                        <li><a href="#why">Why Elasam</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Community</h4>
                     <ul>
                         <li><a href="https://github.com/EhabElasam" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                         <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="legal.html">Legal Notice</a></li>
-                        <li><a href="support.html">Support</a></li>
+                        <li><a href="/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/legal.html">Legal Notice</a></li>
+                        <li><a href="/support.html">Support</a></li>
                     </ul>
                 </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2026 Elasam Labs. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>

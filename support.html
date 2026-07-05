@@ -4,136 +4,209 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Support - Elasam Labs">
+    <meta name="robots" content="index, follow">
     <title>Support - Elasam Labs</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .support-page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: var(--spacing-4xl) 0;
+        }
+        
+        .support-page h1 {
+            margin-bottom: var(--spacing-2xl);
+        }
+        
+        .support-page h2 {
+            margin-top: var(--spacing-2xl);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .support-page h3 {
+            margin-top: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .support-page ul, .support-page ol {
+            margin-left: var(--spacing-xl);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .support-page li {
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-secondary);
+        }
+        
+        .support-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-xl);
+            margin: var(--spacing-2xl) 0;
+        }
+        
+        .support-card {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: var(--spacing-xl);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: all var(--transition-base);
+        }
+        
+        .support-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-primary);
+        }
+        
+        .support-card h3 {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .support-card p {
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-secondary);
+        }
+        
+        .support-card .btn {
+            display: inline-block;
+        }
+        
+        .faq-item {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            border-left: 4px solid var(--accent-primary);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .faq-item h3 {
+            margin-top: 0;
+            color: var(--text-primary);
+        }
+        
+        .faq-item p {
+            margin-bottom: 0;
+            color: var(--text-secondary);
+        }
+        
+        hr {
+            margin: var(--spacing-2xl) 0;
+            border: none;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container">
-            <div class="nav-content">
-                <div class="logo">
+            <div class="nav-wrapper">
+                <a href="/" class="logo" aria-label="Elasam Labs Home">
                     <span class="logo-icon">⚡</span>
                     <span class="logo-text">Elasam Labs</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#apps">Apps</a></li>
-                    <li><a href="privacy.html">Privacy</a></li>
-                    <li><a href="legal.html">Legal</a></li>
-                    <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">🌙</button></li>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/#apps">Apps</a></li>
+                    <li><a href="/privacy.html">Privacy</a></li>
+                    <li><a href="/legal.html">Legal</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <section class="support-content">
+    <section class="support-page">
         <div class="container">
-            <div class="support-page">
-                <h1>Support</h1>
-                
-                <div class="legal-notice">
-                    <strong>ℹ️ SUPPORT INFORMATION</strong>
-                    <p>This is a placeholder support page. Please update this with your actual support resources and contact information.</p>
+            <h1>Support</h1>
+            
+            <h2>Getting Help</h2>
+            <p>We're here to help! If you have any questions or need assistance with our apps and services, please reach out to us using one of the following methods:</p>
+
+            <h2>Contact Methods</h2>
+            
+            <div class="support-cards">
+                <div class="support-card">
+                    <h3>📧 Email Support</h3>
+                    <p>For general inquiries and support requests:</p>
+                    <a href="mailto:support@elasamlabs.com" class="btn btn-primary">support@elasamlabs.com</a>
                 </div>
 
-                <h2>Getting Help</h2>
-                <p>We're here to help! If you have any questions or need assistance with our apps and services, please reach out to us using one of the following methods:</p>
-
-                <h2>Contact Methods</h2>
-                
-                <div class="support-cards">
-                    <div class="support-card">
-                        <h3>📧 Email Support</h3>
-                        <p>For general inquiries and support requests:</p>
-                        <a href="mailto:support@elasamlabs.com" class="btn btn-primary">support@elasamlabs.com</a>
-                    </div>
-
-                    <div class="support-card">
-                        <h3>🔐 Privacy Concerns</h3>
-                        <p>For privacy-related questions and concerns:</p>
-                        <a href="mailto:privacy@elasamlabs.com" class="btn btn-primary">privacy@elasamlabs.com</a>
-                    </div>
-
-                    <div class="support-card">
-                        <h3>💬 General Inquiries</h3>
-                        <p>For any other questions:</p>
-                        <a href="mailto:hello@elasamlabs.com" class="btn btn-primary">hello@elasamlabs.com</a>
-                    </div>
+                <div class="support-card">
+                    <h3>🔐 Privacy Concerns</h3>
+                    <p>For privacy-related questions:</p>
+                    <a href="mailto:privacy@elasamlabs.com" class="btn btn-primary">privacy@elasamlabs.com</a>
                 </div>
 
-                <h2>Frequently Asked Questions</h2>
-
-                <div class="faq-item">
-                    <h3>What is Elasam Labs?</h3>
-                    <p>Elasam Labs is an independent software brand focused on building practical apps, privacy-friendly tools, and AI-powered solutions for everyday users, students, families, and small businesses.</p>
+                <div class="support-card">
+                    <h3>💬 General Inquiries</h3>
+                    <p>For any other questions:</p>
+                    <a href="mailto:hello@elasamlabs.com" class="btn btn-primary">hello@elasamlabs.com</a>
                 </div>
-
-                <div class="faq-item">
-                    <h3>Are your apps really offline?</h3>
-                    <p>Most of our apps are designed to work offline whenever possible. This means you can use them without an internet connection, and your data stays on your device.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>How is my data protected?</h3>
-                    <p>Privacy is our top priority. We follow industry best practices for data security and encryption. For more details, please review our <a href="privacy.html">Privacy Policy</a>.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>Where can I find your apps?</h3>
-                    <p>Our apps are available on various platforms. Check the <a href="index.html#apps">Apps section</a> on our website for download links and availability information.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>How can I report a bug?</h3>
-                    <p>If you encounter any issues, please contact us at <a href="mailto:support@elasamlabs.com">support@elasamlabs.com</a> with a detailed description of the problem.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>Do you collect user data?</h3>
-                    <p>We collect minimal data and only what is necessary to provide and improve our services. Please review our <a href="privacy.html">Privacy Policy</a> for complete information.</p>
-                </div>
-
-                <h2>Response Times</h2>
-                <p>We aim to respond to all support inquiries within 48 hours during business days. For urgent matters, please mark your email as urgent.</p>
-
-                <h2>Social Media</h2>
-                <p>You can also follow us on social media for updates and announcements:</p>
-                <ul>
-                    <li><a href="https://github.com/EhabElasam" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                    <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                </ul>
-
-                <hr>
-                <p><strong>Last Updated:</strong> July 5, 2026</p>
-                <p><strong>Status:</strong> PLACEHOLDER - Update with your actual support resources</p>
             </div>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>What is Elasam Labs?</h3>
+                <p>Elasam Labs is an independent software brand focused on building practical apps, privacy-friendly tools, and AI-powered solutions for everyday users, students, families, and small businesses.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Are your apps really offline?</h3>
+                <p>Most of our apps are designed to work offline whenever possible. This means you can use them without an internet connection, and your data stays on your device.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How is my data protected?</h3>
+                <p>Privacy is our top priority. We follow industry best practices for data security and encryption. For more details, please review our <a href="/privacy.html">Privacy Policy</a>.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Where can I find your apps?</h3>
+                <p>Our apps are available on various platforms. Check the <a href="/#apps">Apps section</a> on our website for availability information.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How can I report a bug?</h3>
+                <p>If you encounter any issues, please contact us at <a href="mailto:support@elasamlabs.com">support@elasamlabs.com</a> with a detailed description of the problem.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do you collect user data?</h3>
+                <p>We collect minimal data and only what is necessary to provide and improve our services. Please review our <a href="/privacy.html">Privacy Policy</a> for complete information.</p>
+            </div>
+
+            <h2>Response Times</h2>
+            <p>We aim to respond to all support inquiries within 48 hours during business days. For urgent matters, please mark your email as urgent.</p>
+
+            <h2>Social Media</h2>
+            <p>You can also follow us on social media for updates and announcements:</p>
+            <ul>
+                <li><a href="https://github.com/EhabElasam" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            </ul>
+
+            <hr>
+            <p><strong>Last Updated:</strong> July 5, 2026</p>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-section">
                     <h4>Elasam Labs</h4>
                     <p>Privacy-first apps and AI-powered tools</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#apps">Apps</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="legal.html">Legal Notice</a></li>
-                        <li><a href="support.html">Support</a></li>
+                        <li><a href="/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/legal.html">Legal Notice</a></li>
+                        <li><a href="/support.html">Support</a></li>
                     </ul>
                 </div>
             </div>
@@ -143,112 +216,6 @@
         </div>
     </footer>
 
-    <style>
-        .support-content {
-            min-height: 100vh;
-            padding: var(--spacing-4xl) 0;
-        }
-
-        .support-page {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .support-page h1 {
-            margin-bottom: var(--spacing-2xl);
-        }
-
-        .support-page h2 {
-            margin-top: var(--spacing-2xl);
-            margin-bottom: var(--spacing-md);
-        }
-
-        .support-page h3 {
-            margin-top: var(--spacing-lg);
-            margin-bottom: var(--spacing-md);
-        }
-
-        .support-page ul, .support-page ol {
-            margin-left: var(--spacing-xl);
-            margin-bottom: var(--spacing-md);
-        }
-
-        .support-page li {
-            margin-bottom: var(--spacing-sm);
-            color: var(--text-secondary);
-        }
-
-        .support-page a {
-            color: var(--accent-primary);
-        }
-
-        .support-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-xl);
-            margin: var(--spacing-2xl) 0;
-        }
-
-        .support-card {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: var(--spacing-xl);
-            text-align: center;
-        }
-
-        .support-card h3 {
-            margin-bottom: var(--spacing-md);
-        }
-
-        .support-card p {
-            margin-bottom: var(--spacing-lg);
-            color: var(--text-secondary);
-        }
-
-        .support-card .btn {
-            display: inline-block;
-        }
-
-        .faq-item {
-            background-color: var(--bg-secondary);
-            border-left: 4px solid var(--accent-primary);
-            padding: var(--spacing-lg);
-            margin-bottom: var(--spacing-lg);
-            border-radius: 8px;
-        }
-
-        .faq-item h3 {
-            margin-top: 0;
-            color: var(--text-primary);
-        }
-
-        .faq-item p {
-            margin-bottom: 0;
-            color: var(--text-secondary);
-        }
-
-        .legal-notice {
-            background-color: var(--bg-secondary);
-            border-left: 4px solid var(--accent-secondary);
-            padding: var(--spacing-lg);
-            margin-bottom: var(--spacing-2xl);
-            border-radius: 8px;
-        }
-
-        .legal-notice strong {
-            color: var(--accent-secondary);
-            display: block;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        hr {
-            margin: var(--spacing-2xl) 0;
-            border: none;
-            border-top: 1px solid var(--border-color);
-        }
-    </style>
-
-    <script src="js/script.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>
