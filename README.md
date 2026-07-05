@@ -202,58 +202,6 @@ git push origin main
 
 **Deployment Time:** 1-2 minutes (initial), usually instant for updates
 
----
-
-## 🔗 DNS Configuration (Cloudflare)
-
-### Step 1: Add A Records (for apex domain)
-
-| Type | Name | IPv4 Address | TTL | Proxy |
-|------|------|--------------|-----|-------|
-| A | @ | 185.199.108.153 | Auto | DNS only |
-| A | @ | 185.199.109.153 | Auto | DNS only |
-| A | @ | 185.199.110.153 | Auto | DNS only |
-| A | @ | 185.199.111.153 | Auto | DNS only |
-
-### Step 2: Add AAAA Records (for IPv6)
-
-| Type | Name | IPv6 Address | TTL | Proxy |
-|------|------|--------------|-----|-------|
-| AAAA | @ | 2606:50c0:8000::153 | Auto | DNS only |
-| AAAA | @ | 2606:50c0:8001::153 | Auto | DNS only |
-| AAAA | @ | 2606:50c0:8002::153 | Auto | DNS only |
-| AAAA | @ | 2606:50c0:8003::153 | Auto | DNS only |
-
-### Step 3: Add CNAME for www
-
-| Type | Name | Target | TTL | Proxy |
-|------|------|--------|-----|-------|
-| CNAME | www | elasamlabs.github.io | Auto | DNS only |
-
-### Step 4: SSL/TLS Configuration
-
-1. In Cloudflare Dashboard:
-   - Go to **SSL/TLS**
-   - Set **Encryption mode** to "Full (strict)"
-   - Enable **Always Use HTTPS**
-
-2. In GitHub Pages Settings:
-   - Enable **Enforce HTTPS**
-
-### Verification
-
-```bash
-# Check DNS resolution
-nslookup elasamlabs.com
-dig elasamlabs.com
-
-# Check HTTPS
-curl -I https://elasamlabs.com
-```
-
-**DNS Propagation Time:** 5-15 minutes
-
----
 
 ## 📊 Performance
 
