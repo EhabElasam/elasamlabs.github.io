@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Elasam Labs",
+  "short_name": "Elasam",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
