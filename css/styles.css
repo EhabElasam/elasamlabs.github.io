@@ -317,6 +317,28 @@ body.dark-mode .navbar {
     transform: translateY(-2px);
 }
 
+.btn-app-store {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+    border-radius: 8px;
+    font-size: var(--font-size-sm);
+    transition: all var(--transition-base);
+}
+
+.btn-app-store:hover {
+    background-color: var(--accent-primary);
+    color: white;
+    transform: scale(1.05);
+}
+
+.btn-app-store .btn-icon {
+    font-size: var(--font-size-lg);
+}
+
 /* ============================================
    HERO SECTION
    ============================================ */
