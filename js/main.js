@@ -223,18 +223,29 @@ function initLanguageSwitcher() {
 
     const currentPath = window.location.pathname;
     const isGermanPage = currentPath.includes('.de.html');
+    const isArabicPage = currentPath.includes('.ar.html');
+
+    const langArBtn = document.getElementById('lang-ar');
 
     if (isGermanPage) {
         langDeBtn.classList.add('active');
         langEnBtn.classList.remove('active');
+        if (langArBtn) langArBtn.classList.remove('active');
+    } else if (isArabicPage) {
+        if (langArBtn) langArBtn.classList.add('active');
+        langEnBtn.classList.remove('active');
+        langDeBtn.classList.remove('active');
     } else {
         langEnBtn.classList.add('active');
         langDeBtn.classList.remove('active');
+        if (langArBtn) langArBtn.classList.remove('active');
     }
 
     langEnBtn.addEventListener('click', () => {
         if (isGermanPage) {
             window.location.href = currentPath.replace('.de.html', '.html');
+        } else if (isArabicPage) {
+            window.location.href = currentPath.replace('.ar.html', '.html');
         } else if (currentPath.includes('pdf-offline.html')) {
             window.location.href = '/pdf-offline.html';
         } else {
@@ -246,11 +257,31 @@ function initLanguageSwitcher() {
         if (!isGermanPage) {
             if (currentPath.includes('pdf-offline.html')) {
                 window.location.href = '/pdf-offline.de.html';
+            } else if (currentPath.includes('pdf-offline.ar.html')) {
+                window.location.href = '/pdf-offline.de.html';
+            } else if (isArabicPage) {
+                window.location.href = '/index.de.html';
             } else {
                 window.location.href = '/index.de.html';
             }
         }
     });
+
+    if (langArBtn) {
+        langArBtn.addEventListener('click', () => {
+            if (!isArabicPage) {
+                if (currentPath.includes('pdf-offline.html')) {
+                    window.location.href = '/pdf-offline.ar.html';
+                } else if (currentPath.includes('pdf-offline.de.html')) {
+                    window.location.href = '/pdf-offline.ar.html';
+                } else if (isGermanPage) {
+                    window.location.href = '/index.ar.html';
+                } else {
+                    window.location.href = '/index.ar.html';
+                }
+            }
+        });
+    }
 }
 
 // ============================================
