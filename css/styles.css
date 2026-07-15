@@ -887,3 +887,189 @@ body.dark-mode .navbar {
         background-color: var(--bg-primary);
     }
 }
+
+/* ============================================
+   APP DETAIL PAGE
+   ============================================ */
+
+.app-detail-hero {
+    padding: var(--spacing-4xl) 0;
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.app-detail-hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-4xl);
+    align-items: center;
+}
+
+.app-detail-hero .hero-title {
+    font-size: var(--font-size-5xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.app-detail-hero .hero-subtitle {
+    font-size: var(--font-size-xl);
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.app-mockup {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: var(--shadow-xl);
+}
+
+.features-grid, .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.feature-card, .step-card {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-fast);
+}
+
+.feature-card:hover, .step-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3, .step-card h3 {
+    color: var(--accent-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.feature-card p, .step-card p {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+/* ============================================
+   CONTACT FORM
+   ============================================ */
+
+.contact-form-container {
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-4xl) 0;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--spacing-2xl);
+    background-color: var(--bg-primary);
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: var(--font-size-base);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(var(--accent-primary-rgb), 0.2);
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-submit-btn {
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-xl);
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.form-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* ============================================
+   LANGUAGE SWITCHER
+   ============================================ */
+
+.lang-switcher {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: center;
+}
+
+.lang-switcher button {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    border-radius: 8px;
+    transition: all var(--transition-fast);
+}
+
+.lang-switcher button.active {
+    background-color: var(--accent-primary);
+    color: white;
+}
+
+.lang-switcher button:hover:not(.active) {
+    background-color: var(--bg-tertiary);
+    color: var(--accent-primary);
+}
+
+@media (max-width: 768px) {
+    .app-detail-hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .app-detail-hero .hero-visual {
+        order: -1; /* Move image above text on mobile */
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .app-detail-hero .hero-cta {
+        justify-content: center;
+    }
+}

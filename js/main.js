@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initIntersectionObserver();
     initAccessibility();
+    initLanguageSwitcher();
 });
 
 // ============================================
@@ -206,6 +207,49 @@ if ('IntersectionObserver' in window) {
     
     document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
+    });
+}
+
+// ============================================
+// ============================================
+// LANGUAGE SWITCHER
+// ============================================
+
+function initLanguageSwitcher() {
+    const langEnBtn = document.getElementById('lang-en');
+    const langDeBtn = document.getElementById('lang-de');
+
+    if (!langEnBtn || !langDeBtn) return;
+
+    const currentPath = window.location.pathname;
+    const isGermanPage = currentPath.includes('.de.html');
+
+    if (isGermanPage) {
+        langDeBtn.classList.add('active');
+        langEnBtn.classList.remove('active');
+    } else {
+        langEnBtn.classList.add('active');
+        langDeBtn.classList.remove('active');
+    }
+
+    langEnBtn.addEventListener('click', () => {
+        if (isGermanPage) {
+            window.location.href = currentPath.replace('.de.html', '.html');
+        } else if (currentPath.includes('pdf-offline.html')) {
+            window.location.href = '/pdf-offline.html';
+        } else {
+            window.location.href = '/index.html';
+        }
+    });
+
+    langDeBtn.addEventListener('click', () => {
+        if (!isGermanPage) {
+            if (currentPath.includes('pdf-offline.html')) {
+                window.location.href = '/pdf-offline.de.html';
+            } else {
+                window.location.href = '/index.de.html';
+            }
+        }
     });
 }
 
