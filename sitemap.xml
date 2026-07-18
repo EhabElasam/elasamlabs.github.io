@@ -1,33 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://elasamlabs.com/</loc>
-        <lastmod>2026-07-05</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://elasamlabs.com/index.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://elasamlabs.com/privacy.html</loc>
-        <lastmod>2026-07-05</lastmod>
+        <loc>https://elasamlabs.com/index.de.html</loc>
+        <lastmod>2026-07-18</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://elasamlabs.com/legal.html</loc>
-        <lastmod>2026-07-05</lastmod>
+        <loc>https://elasamlabs.com/index.ar.html</loc>
+        <lastmod>2026-07-18</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://elasamlabs.com/support.html</loc>
-        <lastmod>2026-07-05</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://elasamlabs.com/pdf-offline.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://elasamlabs.com/404.html</loc>
-        <lastmod>2026-07-05</lastmod>
+        <loc>https://elasamlabs.com/pdf-offline.de.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://elasamlabs.com/pdf-offline.ar.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://elasamlabs.com/privacy.html</loc>
+        <lastmod>2026-07-18</lastmod>
         <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://elasamlabs.com/legal.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://elasamlabs.com/support.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
     </url>
 </urlset>
