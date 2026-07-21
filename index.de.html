@@ -82,6 +82,8 @@
                     <li role="none"><a href="/index.de.html#why" role="menuitem">Warum Elasam</a></li>
                     <li role="none"><a href="/index.de.html#about" role="menuitem">Über uns</a></li>
                     <li role="none"><a href="/index.de.html#contact" role="menuitem">Kontakt</a></li>
+                    <li role="none"><a href="/imprint.de.html" role="menuitem">Impressum</a></li>
+
                     <li role="none"><button class="theme-toggle" id="themeToggle" aria-label="Dunkel-/Hellmodus umschalten" role="menuitem">🌙</button></li>
                     <li role="none">
                         <div class="lang-switcher">
@@ -274,50 +276,33 @@
         </section>
 
         <!-- Contact Section -->
-        <section class="contact-form-container" role="region" aria-label="Kontaktformular">
+        <section class="contact" id="contact" role="region" aria-label="Kontaktinformationen">
             <div class="container">
                 <div class="section-header">
                     <h2>Kontakt aufnehmen</h2>
-                    <p>Wir freuen uns darauf, von Ihnen zu hören</p>
+                    <p>Wir würden uns freuen, von Ihnen zu hören. Wählen Sie den besten Weg, uns zu erreichen.</p>
                 </div>
-                <form class="contact-form" action="https://formspree.io/f/fbdgqjqr" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-Mail</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Nachricht</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="form-submit-btn">Nachricht senden</button>
-                </form>
+                <div class="contact-options">
+                    <a href="mailto:hello@elasamlabs.com" class="contact-option">
+                        <span class="icon">📧</span>
+                        <h3>Allgemeine Anfragen</h3>
+                        <p>hello@elasamlabs.com</p>
+                    </a>
+                    <a href="mailto:support@elasamlabs.com" class="contact-option">
+                        <span class="icon">🛠️</span>
+                        <h3>Support</h3>
+                        <p>support@elasamlabs.com</p>
+                    </a>
+                    <a href="https://github.com/EhabElasam" target="_blank" rel="noopener noreferrer" class="contact-option">
+                        <span class="icon">🐙</span>
+                        <h3>GitHub</h3>
+                        <p>github.com/EhabElasam</p>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section class="contact" id="contact" role="region" aria-label="Kontaktinformationen">
-            <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <h3>Allgemeine Anfragen</h3>
-                        <a href="mailto:hello@elasamlabs.com" class="contact-link">hello@elasamlabs.com</a>
-                    </div>
-                    
-                    <div class="contact-card">
-                        <h3>Support</h3>
-                        <a href="mailto:support@elasamlabs.com" class="contact-link">support@elasamlabs.com</a>
-                    </div>
-                    
-                    <div class="contact-card">
-                        <h3>Datenschutz & Sicherheit</h3>
-                        <a href="mailto:privacy@elasamlabs.com" class="contact-link">privacy@elasamlabs.com</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+
     </main>
 
     <footer class="footer" role="contentinfo">
@@ -343,6 +328,7 @@
                         <li><a href="https://github.com/EhabElasam" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                         <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                         <li><a href="/index.de.html#contact">Kontakt</a></li>
+                        <li><a href="/imprint.de.html">Impressum</a></li>
                     </ul>
                 </div>
                 
@@ -350,7 +336,7 @@
                     <h4>Rechtliches</h4>
                     <ul>
                         <li><a href="/privacy.html">Datenschutzerklärung</a></li>
-                        <li><a href="/legal.html">Impressum</a></li>
+                        <li><a href="/imprint.de.html">Impressum</a></li>
                         <li><a href="/support.html">Support</a></li>
                     </ul>
                 </div>
